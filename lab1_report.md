@@ -84,22 +84,16 @@
 
 ## 4. Скриншоты и видео
 
-### Скриншоты работы бота
-
-*(Вставить скриншоты: /start с inline-клавиатурой, /help, /search с результатом, /popular)*
-
-### Видео-демо
-
-*(Ссылка на YouTube / Google Drive — 2-3 минуты)*
+https://drive.google.com/drive/folders/1opn08PbANkm7WxeZATYZF28aam_AHo9K
 
 ---
 
-## 5. Трудности и решения
+## 5. Трудности и как решила
 
 | Проблема | Решение |
 |---|---|
-| `RuntimeError: This event loop is already running` | Добавил `close_loop=False` в `app.run_polling()` |
-| Кнопки inline-клавиатуры не реагировали | Забыл зарегистрировать `CallbackQueryHandler` в `app.add_handler()` |
+| `RuntimeError: This event loop is already running` | Добавила `close_loop=False` в `app.run_polling()` |
+| Кнопки inline-клавиатуры не реагировали | Забыла зарегистрировать `CallbackQueryHandler` в `app.add_handler()` |
 | При нажатии кнопки Telegram показывал «часики» | Нужно обязательно вызывать `await query.answer()` в обработчике |
 
 ---
